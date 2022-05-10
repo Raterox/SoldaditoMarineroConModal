@@ -44,28 +44,24 @@
             font-size: 40px;
             font-weight: bold;
         }
-
-        p>p {
-            background-color: green;
-            width: 300px;
-            padding: 10px 20px;
-            margin: 20% auto;
-            position: relative;
-        }
-
-        .modal {
+        /*En el caso que haya un a seguido de un div, en nuestro ejemplo seria el mismo modal que aparece*/
+        a+div {
             background-color: rgba(0, 0, 0, .8);
-            position: absolute;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
             opacity: 0;
             pointer-events: none;
-            transition: all 0.5s;
+            transition: all 2s;
         }
-
+        /*Tenemos que usar id ya que sino, no podriamos llamarlo de ninguna manera*/
         #fuenteYAutor:target {
             opacity: 0.95;
             pointer-events: auto;
         }
-
+        /*Usamos div+a y p+a para evitar usar clases, lo cual haria trabajar mas al explorador*/
         div+a,
         p+a {
             background-color: blue;
@@ -76,8 +72,15 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 4px 2px;
             cursor: pointer;
+            width: 300px;
+            margin: 20% auto;
+            position: relative;
+        }
+        /*Esta ruta indica, los a que tengas posteriormente un div, cuyo hijo sea un p seguido de otro p*/
+        a+div>p+p{
+            font-size:50px;
+            font-weight:bold;
         }
     </style>
 </head>
@@ -119,11 +122,12 @@
     </div>
 
     <a href="#fuenteYAutor">Fuente Original y Autor</a>
-    <div id="fuenteYAutor" class="modal">
+    
+    <div id="fuenteYAutor">
         <p>
+        </p>
         <p>Fuente: https://www.letras.com/fito-fitipaldis/614056/</p>
         <p>Autor: Fito y los Fitipaldis</p>
-        </p>
         <a href="#">Cerrar</a>
     </div>
 
