@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letra Soldadito Marinero Ignacio</title>
+    <style>
+        body {
+            background-color: darkgray;
+            text-align: center;
+        }
+
+        div:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        div:nth-child(odd) {
+            background-color: white;
+        }
+
+        div::first-letter {
+            font-weight: bold;
+            font-style: oblique;
+            font-size: 30px;
+        }
+
+        div>p:last-child:after {
+            content: "...";
+        }
+
+        div>p {
+            margin-bottom: 12px;
+        }
+
+        div {
+            margin-bottom: 36px;
+        }
+
+        body>p:last-child,
+        body>p:first-child {
+            color: blue;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        p>p {
+            background-color: green;
+            width: 300px;
+            padding: 10px 20px;
+            margin: 20% auto;
+            position: relative;
+        }
+
+        .modal {
+            background-color: rgba(0, 0, 0, .8);
+            position: sticky;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.5s;
+        }
+
+        #fuenteYAutor:target {
+            opacity: 0.95;
+            pointer-events: auto;
+        }
+
+        div+a,
+        p+a {
+            background-color: blue;
+            border-radius: 15px;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Soldadito Marinero</p>
+    <div>
+        <p>El camina despacito que las prisas no son buenas</p>
+        <p>En su brazo dobladita, con cuidado la chaqueta</p>
+        <p>Luego pasa por la calle donde los chavales juegan</p>
+        <p>El tambien quiso ser ninio pero le pillo la guerra</p>
+    </div>
+
+    <div>
+        <p>De esas que dicen te quiero si ven la cartera llena</p>
+        <p>En su brazo dobladita, con cuidado la chaqueta</p>
+        <p>Escogiste a la mas guapa y a la menos buena</p>
+        <p>Sin saber como ha venido te ha cogido la tormenta</p>
+    </div>
+
+    <div>
+        <p>El queria cruzar los mares y olvidar a su sirena</p>
+        <p>La verdad, no fue dificil cuando conocio a Mariela</p>
+        <p>Que tenia los ojos verdes y un negocio entre las piernas</p>
+        <p>Hay que ver que punteria, no te arrimas a una buena</p>
+    </div>
+
+    <div>
+        <p>Soldadito marinero conociste a una sirena</p>
+        <p>De esas que dicen te quiero si ven la cartera llena</p>
+        <p>Escogiste la mas guapa y a la menos buena</p>
+        <p>Sin saber como ha venido te ha cogido la tormenta</p>
+    </div>
+
+    <div>
+        <p>Despues de un invierno malo, una mala primavera</p>
+        <p>Dime por que estas buscando una lagrima en la arena</p>
+        <p>Despues de un invierno malo</p>
+    </div>
+
+    <a href="#fuenteYAutor">Fuente Original y Autor</a>
+    <div id="fuenteYAutor" class="modal">
+        <p>
+        <p>Fuente: https://www.letras.com/fito-fitipaldis/614056/</p>
+        <p>Fito y los Fitipaldis</p>
+        </p>
+        <a href="#">Cerrar</a>
+    </div>
+
+</body>
+
+</html>
